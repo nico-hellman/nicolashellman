@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicolás Hellman Becerra — Desarrollador Independiente</title>
+  <meta name="description" content="Desarrollador independiente full-stack especializado en sistemas ERP, plataformas SaaS, automatización RPA, videollamadas WebRTC y DevOps. Basado en Chile." />
+  <meta name="keywords" content="desarrollador independiente Chile, fullstack, ERP, SaaS, Next.js, React, Node.js, Python, Docker, automatización" />
+  <meta name="author" content="Nicolás Hellman Becerra" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nicolás Hellman Becerra — Desarrollador Independiente" />
+  <meta property="og:description" content="Soluciones digitales a medida: ERP, SaaS, automatización RPA y más." />
+  <meta property="og:type" content="website" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== CURSOR ===== -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo" id="nav-logo-link">
+        <span class="logo-bracket">&lt;</span>NH<span class="logo-bracket">/&gt;</span>
+      </a>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Cambiar modo claro/oscuro">
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb">
+              <span class="icon-dark" aria-hidden="true">🌙</span>
+              <span class="icon-light" aria-hidden="true">☀️</span>
+            </span>
+          </span>
+          <span class="theme-toggle-label" id="theme-label">Modo Día</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#inicio" class="nav-link active" id="nav-inicio">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav-link" id="nav-sobre">Sobre mí</a></li>
+        <li><a href="#proyectos" class="nav-link" id="nav-proyectos">Proyectos</a></li>
+        <li><a href="#habilidades" class="nav-link" id="nav-habilidades">Habilidades</a></li>
+        <li><a href="#contacto" class="nav-link" id="nav-contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="hero" aria-label="Presentación">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        <span>Disponible para proyectos</span>
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        <span class="hero-greeting">Hola, soy</span>
+        <span class="hero-name">Nicolás Hellman</span>
+        <span class="hero-role">Desarrollador <span class="typed-text" id="typed-text" aria-live="polite"></span><span class="cursor-blink" aria-hidden="true">|</span></span>
+      </h1>
+      <p class="hero-desc" id="hero-desc">
+        Construyo plataformas digitales robustas end-to-end: desde APIs y bases de datos hasta frontends premium, 
+        pasando por automatización RPA, DevOps con Docker y arquitecturas en la nube. 
+        <strong>Basado en Chile. Trabajo remoto.</strong>
+      </p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="#proyectos" class="btn btn-primary" id="hero-btn-projects">
+          <i class="fas fa-folder-open" aria-hidden="true"></i> Ver Proyectos
+        </a>
+        <a href="#contacto" class="btn btn-secondary" id="hero-btn-contact">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i> Contactar
+        </a>
+      </div>
+      <div class="hero-stats" id="hero-stats" role="list" aria-label="Estadísticas">
+        <div class="stat-item" role="listitem">
+          <span class="stat-num" data-target="4">0</span>
+          <span class="stat-label">Proyectos entregados</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Años de experiencia</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-num" data-target="15">0</span>
+          <span class="stat-label">Tecnologías dominadas</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" id="hero-scroll" aria-label="Desplázate hacia abajo">
+      <div class="scroll-line" aria-hidden="true"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE MÍ ===== -->
+  <section id="sobre-mi" class="section about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// sobre mí</span>
+        <h2 class="section-title" id="about-heading">¿Quién soy?</h2>
+        <p class="section-subtitle">Desarrollador independiente con visión de producto</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual" id="about-visual" aria-hidden="true">
+          <div class="avatar-wrapper">
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-ring ring-3"></div>
+            <div class="avatar-core">
+              <span class="avatar-initials">NH</span>
+            </div>
+            <div class="avatar-badge" aria-hidden="true">
+              <i class="fas fa-code"></i>
+            </div>
+          </div>
+          <div class="floating-cards" aria-hidden="true">
+            <div class="float-card fc-1">
+              <i class="fab fa-react"></i>
+              <span>React / Next.js</span>
+            </div>
+            <div class="float-card fc-2">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="float-card fc-3">
+              <i class="fab fa-docker"></i>
+              <span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="about-text">
+            Soy Nicolás Hellman Becerra, desarrollador de software independiente con sede en Chile. 
+            Me especializo en construir <strong>sistemas digitales completos</strong> que van desde APIs 
+            robustas y bases de datos relacionales, hasta interfaces de usuario modernas y despliegues 
+            profesionales en la nube.
+          </p>
+          <p class="about-text">
+            Mi enfoque es pragmático y orientado a resultados: entiendo el problema de negocio antes 
+            de escribir la primera línea de código. He desarrollado plataformas SaaS con pagos integrados, 
+            sistemas ERP para comercio, bots de automatización RPA y herramientas de análisis de datos 
+            para compras públicas.
+          </p>
+          <div class="about-highlights" role="list" aria-label="Puntos destacados">
+            <div class="highlight-item" role="listitem">
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              <span>Arquitecturas full-stack escalables con Docker y microservicios</span>
+            </div>
+            <div class="highlight-item" role="listitem">
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              <span>Integración de pagos (Flow, Transbank) y APIs de terceros</span>
+            </div>
+            <div class="highlight-item" role="listitem">
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              <span>Automatización RPA con Playwright y Puppeteer</span>
+            </div>
+            <div class="highlight-item" role="listitem">
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              <span>DevOps: CI/CD, VPS, Nginx, SSL, GitHub</span>
+            </div>
+            <div class="highlight-item" role="listitem">
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              <span>Videollamadas WebRTC con LiveKit y BigBlueButton</span>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="#contacto" class="btn btn-primary" id="about-hire-btn">
+              <i class="fas fa-handshake" aria-hidden="true"></i> Trabajemos juntos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS ===== -->
+  <section id="proyectos" class="section projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// proyectos</span>
+        <h2 class="section-title" id="projects-heading">Trabajo Destacado</h2>
+        <p class="section-subtitle">Soluciones reales construidas con tecnología de producción</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Proyecto 1: Perfilando -->
+        <article class="project-card card-featured" id="project-perfilando" tabindex="0" aria-label="Proyecto Perfilando">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="project-icon-wrap" aria-hidden="true">
+              <i class="fas fa-video"></i>
+            </div>
+            <div class="project-tags" role="list" aria-label="Tecnologías">
+              <span class="tag tag-featured" role="listitem">SaaS</span>
+              <span class="tag" role="listitem">Next.js 16</span>
+              <span class="tag" role="listitem">LiveKit</span>
+              <span class="tag" role="listitem">Prisma</span>
+            </div>
+          </div>
+          <h3 class="project-title">Perfilando — Plataforma SaaS de Educación Online</h3>
+          <p class="project-desc">
+            Ecosistema educativo completo para instructores independientes. Incluye aulas virtuales 
+            con videollamadas WebRTC (LiveKit + BigBlueButton), grabaciones en la nube (S3), 
+            sistema de suscripciones de pago, pasarela Flow, editor rich-text, 
+            notificaciones push (FCM) y <strong>RPA del SII</strong> para emisión automatizada de Boletas de Honorarios Electrónicas.
+          </p>
+          <div class="project-features" aria-label="Características">
+            <div class="feature">
+              <i class="fas fa-video" aria-hidden="true"></i>
+              <span>Videollamadas WebRTC (LiveKit SFU)</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-robot" aria-hidden="true"></i>
+              <span>RPA SII con Puppeteer (bypass anticaptcha)</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-credit-card" aria-hidden="true"></i>
+              <span>Pasarela de pagos Flow + suscripciones</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              <span>Ciberseguridad nivel empresarial (ISO 27001)</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-cloud" aria-hidden="true"></i>
+              <span>Grabaciones en Amazon S3 + Redis BullMQ</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-database" aria-hidden="true"></i>
+              <span>PostgreSQL 15 + Prisma ORM + Redis</span>
+            </div>
+          </div>
+          <div class="project-stack" aria-label="Stack tecnológico">
+            <span class="stack-badge">Next.js 16</span>
+            <span class="stack-badge">TypeScript</span>
+            <span class="stack-badge">Prisma</span>
+            <span class="stack-badge">PostgreSQL</span>
+            <span class="stack-badge">Redis</span>
+            <span class="stack-badge">LiveKit</span>
+            <span class="stack-badge">Docker</span>
+            <span class="stack-badge">AWS S3</span>
+            <span class="stack-badge">FCM</span>
+            <span class="stack-badge">Puppeteer</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: FluxerERP -->
+        <article class="project-card" id="project-fluxerp" tabindex="0" aria-label="Proyecto FluxerERP">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="project-icon-wrap" aria-hidden="true">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-tags" role="list" aria-label="Tecnologías">
+              <span class="tag tag-erp" role="listitem">ERP</span>
+              <span class="tag" role="listitem">Node.js</span>
+              <span class="tag" role="listitem">React</span>
+              <span class="tag" role="listitem">DTE</span>
+            </div>
+          </div>
+          <h3 class="project-title">Fluxer ERP — Sistema de Gestión Empresarial</h3>
+          <p class="project-desc">
+            ERP completo para pymes chilenas desplegado en VPS con CI/CD propio. 
+            Gestión de productos (con QR/código de barras), facturación electrónica DTE 
+            certificada por el SII, autenticación JWT y pipeline profesional de 
+            Staging → Producción con Docker Compose.
+          </p>
+          <div class="project-features" aria-label="Características">
+            <div class="feature">
+              <i class="fas fa-file-invoice" aria-hidden="true"></i>
+              <span>Facturación DTE certificada SII (Chile)</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-qrcode" aria-hidden="true"></i>
+              <span>QR Codes y barcodes de productos</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-server" aria-hidden="true"></i>
+              <span>Pipeline Staging → Producción en VPS</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <span>Auth JWT + rate limiting + Nginx SSL</span>
+            </div>
+          </div>
+          <div class="project-stack" aria-label="Stack tecnológico">
+            <span class="stack-badge">Node.js</span>
+            <span class="stack-badge">Express</span>
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">Vite</span>
+            <span class="stack-badge">Prisma</span>
+            <span class="stack-badge">PostgreSQL</span>
+            <span class="stack-badge">Docker</span>
+            <span class="stack-badge">Nginx</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 3: Minifluxer / Proyecto1 -->
+        <article class="project-card" id="project-minifluxer" tabindex="0" aria-label="Proyecto Minifluxer">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="project-icon-wrap" aria-hidden="true">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="project-tags" role="list" aria-label="Tecnologías">
+              <span class="tag tag-rpa" role="listitem">RPA</span>
+              <span class="tag" role="listitem">Python</span>
+              <span class="tag" role="listitem">FastAPI</span>
+              <span class="tag" role="listitem">Automatización</span>
+            </div>
+          </div>
+          <h3 class="project-title">Minifluxer — Suite de Automatización Compras Públicas</h3>
+          <p class="project-desc">
+            Herramienta de escritorio y API para auditoría y automatización de compras públicas 
+            en Mercado Público (Chile). Integra la API OCDS, bypass de reCAPTCHA Enterprise v3 con 
+            Playwright, extracción OCR de PDFs y sincronización automática de Órdenes de Compra.
+          </p>
+          <div class="project-features" aria-label="Características">
+            <div class="feature">
+              <i class="fas fa-spider" aria-hidden="true"></i>
+              <span>Bot Playwright con bypass reCAPTCHA Enterprise v3</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+              <span>OCR de PDFs (pdfplumber) para clasificación legal</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-sync" aria-hidden="true"></i>
+              <span>Sincronización automática vía APScheduler (24h)</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <span>App de escritorio portable (.exe) con CustomTkinter</span>
+            </div>
+          </div>
+          <div class="project-stack" aria-label="Stack tecnológico">
+            <span class="stack-badge">Python 3.12</span>
+            <span class="stack-badge">FastAPI</span>
+            <span class="stack-badge">Playwright</span>
+            <span class="stack-badge">SQLite</span>
+            <span class="stack-badge">APScheduler</span>
+            <span class="stack-badge">PyInstaller</span>
+            <span class="stack-badge">pdfplumber</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 4: WebStudios -->
+        <article class="project-card" id="project-ws" tabindex="0" aria-label="Proyecto WebStudios">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="project-icon-wrap" aria-hidden="true">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <div class="project-tags" role="list" aria-label="Tecnologías">
+              <span class="tag tag-gov" role="listitem">Licitaciones</span>
+              <span class="tag" role="listitem">Next.js</span>
+              <span class="tag" role="listitem">PDF</span>
+              <span class="tag" role="listitem">Gobierno</span>
+            </div>
+          </div>
+          <h3 class="project-title">WS — Generador de Propuestas Técnicas</h3>
+          <p class="project-desc">
+            Aplicación Next.js para la generación automatizada de propuestas técnico-económicas 
+            para licitaciones gubernamentales (ONDAC). Genera documentos PDF profesionales de 
+            forma programática con datos estructurados. Desplegado en Netlify con Docker.
+          </p>
+          <div class="project-features" aria-label="Características">
+            <div class="feature">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+              <span>Generación de PDFs técnicos con Node.js</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-landmark" aria-hidden="true"></i>
+              <span>Propuestas para licitaciones gubernamentales</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+              <span>Despliegue en Netlify + Docker</span>
+            </div>
+          </div>
+          <div class="project-stack" aria-label="Stack tecnológico">
+            <span class="stack-badge">Next.js 16</span>
+            <span class="stack-badge">TypeScript</span>
+            <span class="stack-badge">Node.js</span>
+            <span class="stack-badge">Netlify</span>
+            <span class="stack-badge">Docker</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HABILIDADES ===== -->
+  <section id="habilidades" class="section skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// habilidades</span>
+        <h2 class="section-title" id="skills-heading">Stack Tecnológico</h2>
+        <p class="section-subtitle">Herramientas y tecnologías que domino en producción</p>
+      </div>
+      <div class="skills-categories" role="list" aria-label="Categorías de habilidades">
+
+        <div class="skills-cat" role="listitem">
+          <div class="cat-header">
+            <i class="fas fa-layer-group cat-icon" aria-hidden="true"></i>
+            <h3 class="cat-title">Frontend</h3>
+          </div>
+          <div class="skills-list" role="list">
+            <div class="skill-item" role="listitem">
+              <i class="fab fa-react" aria-hidden="true"></i>
+              <span>React / Next.js</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="React / Next.js 92%"><div class="skill-fill" style="--pct:92%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fab fa-js" aria-hidden="true"></i>
+              <span>TypeScript / JavaScript</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="TypeScript 90%"><div class="skill-fill" style="--pct:90%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fab fa-css3-alt" aria-hidden="true"></i>
+              <span>CSS / Tailwind CSS</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="CSS Tailwind 88%"><div class="skill-fill" style="--pct:88%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fas fa-bolt" aria-hidden="true"></i>
+              <span>Vite</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Vite 85%"><div class="skill-fill" style="--pct:85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-cat" role="listitem">
+          <div class="cat-header">
+            <i class="fas fa-server cat-icon" aria-hidden="true"></i>
+            <h3 class="cat-title">Backend</h3>
+          </div>
+          <div class="skills-list" role="list">
+            <div class="skill-item" role="listitem">
+              <i class="fab fa-node-js" aria-hidden="true"></i>
+              <span>Node.js / Express</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Node.js 90%"><div class="skill-fill" style="--pct:90%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fab fa-python" aria-hidden="true"></i>
+              <span>Python / FastAPI</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Python FastAPI 88%"><div class="skill-fill" style="--pct:88%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fas fa-database" aria-hidden="true"></i>
+              <span>PostgreSQL / SQLite</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="PostgreSQL 85%"><div class="skill-fill" style="--pct:85%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fas fa-memory" aria-hidden="true"></i>
+              <span>Redis / BullMQ</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Redis 82%"><div class="skill-fill" style="--pct:82%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-cat" role="listitem">
+          <div class="cat-header">
+            <i class="fas fa-infinity cat-icon" aria-hidden="true"></i>
+            <h3 class="cat-title">DevOps & Nube</h3>
+          </div>
+          <div class="skills-list" role="list">
+            <div class="skill-item" role="listitem">
+              <i class="fab fa-docker" aria-hidden="true"></i>
+              <span>Docker / Docker Compose</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Docker 88%"><div class="skill-fill" style="--pct:88%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fas fa-globe" aria-hidden="true"></i>
+              <span>Nginx / SSL / VPS</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Nginx SSL 85%"><div class="skill-fill" style="--pct:85%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fab fa-aws" aria-hidden="true"></i>
+              <span>AWS S3 / Cloud Storage</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="AWS S3 80%"><div class="skill-fill" style="--pct:80%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fab fa-git-alt" aria-hidden="true"></i>
+              <span>Git / GitHub / CI-CD</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Git GitHub 90%"><div class="skill-fill" style="--pct:90%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-cat" role="listitem">
+          <div class="cat-header">
+            <i class="fas fa-robot cat-icon" aria-hidden="true"></i>
+            <h3 class="cat-title">Automatización & Más</h3>
+          </div>
+          <div class="skills-list" role="list">
+            <div class="skill-item" role="listitem">
+              <i class="fas fa-spider" aria-hidden="true"></i>
+              <span>Playwright / Puppeteer RPA</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" aria-label="Playwright Puppeteer 87%"><div class="skill-fill" style="--pct:87%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fas fa-video" aria-hidden="true"></i>
+              <span>WebRTC / LiveKit / BBB</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="WebRTC LiveKit 82%"><div class="skill-fill" style="--pct:82%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <span>Auth JWT / BCrypt / CSRF</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Auth security 88%"><div class="skill-fill" style="--pct:88%"></div></div>
+            </div>
+            <div class="skill-item" role="listitem">
+              <i class="fas fa-file-invoice" aria-hidden="true"></i>
+              <span>Facturación DTE / SII Chile</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" aria-label="DTE SII 83%"><div class="skill-fill" style="--pct:83%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Cloud -->
+      <div class="tech-cloud" aria-label="Tecnologías adicionales">
+        <span class="tech-pill">Prisma ORM</span>
+        <span class="tech-pill">Next Auth</span>
+        <span class="tech-pill">Firebase FCM</span>
+        <span class="tech-pill">Transbank</span>
+        <span class="tech-pill">Flow Payments</span>
+        <span class="tech-pill">Tiptap Editor</span>
+        <span class="tech-pill">Nodemailer</span>
+        <span class="tech-pill">Coturn TURN</span>
+        <span class="tech-pill">pdf-lib</span>
+        <span class="tech-pill">pdfplumber</span>
+        <span class="tech-pill">PyInstaller</span>
+        <span class="tech-pill">CustomTkinter</span>
+        <span class="tech-pill">SQLAlchemy</span>
+        <span class="tech-pill">APScheduler</span>
+        <span class="tech-pill">Certbot SSL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicios" class="section services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// servicios</span>
+        <h2 class="section-title" id="services-heading">¿En qué puedo ayudarte?</h2>
+        <p class="section-subtitle">Soluciones a medida para negocios en crecimiento</p>
+      </div>
+      <div class="services-grid" role="list">
+        <div class="service-card" role="listitem" id="service-webapp">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-globe"></i></div>
+          <h3 class="service-title">Aplicaciones Web Full-Stack</h3>
+          <p class="service-desc">Plataformas SaaS, portales corporativos y sistemas a medida con React/Next.js en el frontend y Node.js o Python en el backend.</p>
+        </div>
+        <div class="service-card" role="listitem" id="service-erp">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
+          <h3 class="service-title">Sistemas ERP y Gestión</h3>
+          <p class="service-desc">ERPs para pymes con gestión de inventario, facturación DTE/SII, reportes y módulos personalizados según la operación del negocio.</p>
+        </div>
+        <div class="service-card" role="listitem" id="service-rpa">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-robot"></i></div>
+          <h3 class="service-title">Automatización & RPA</h3>
+          <p class="service-desc">Bots que automatizan tareas repetitivas: descarga de documentos, llenado de formularios, scraping de datos y sync con APIs externas.</p>
+        </div>
+        <div class="service-card" role="listitem" id="service-video">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-video"></i></div>
+          <h3 class="service-title">Videollamadas & Real-Time</h3>
+          <p class="service-desc">Implementación de infraestructura WebRTC con LiveKit o BigBlueButton: salas virtuales, grabaciones en la nube y chat en tiempo real.</p>
+        </div>
+        <div class="service-card" role="listitem" id="service-devops">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-server"></i></div>
+          <h3 class="service-title">DevOps & Despliegue</h3>
+          <p class="service-desc">Configuración de VPS, contenedores Docker, Nginx, SSL, pipelines CI/CD y monitoreo. Tu app en producción de forma profesional.</p>
+        </div>
+        <div class="service-card" role="listitem" id="service-api">
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-plug"></i></div>
+          <h3 class="service-title">APIs & Integraciones</h3>
+          <p class="service-desc">Diseño e integración de APIs REST: pasarelas de pago (Flow, Transbank), Firebase, AWS, SII/Mercado Público y más.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="section contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// contacto</span>
+        <h2 class="section-title" id="contact-heading">Hablemos</h2>
+        <p class="section-subtitle">¿Tienes un proyecto en mente? Cuéntame.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">
+            Estoy disponible para proyectos freelance, desarrollo a largo plazo y asesorías técnicas.
+            Respondo en menos de 24 horas.
+          </p>
+          <div class="contact-channels" role="list" aria-label="Canales de contacto">
+            <a href="mailto:nhellman.dev@gmail.com" class="contact-channel" id="contact-email" role="listitem" aria-label="Enviar email">
+              <div class="channel-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+              <div class="channel-info">
+                <span class="channel-label">Email</span>
+                <span class="channel-value">nhellman.dev@gmail.com</span>
+              </div>
+              <i class="fas fa-arrow-right channel-arrow" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/nhellman" target="_blank" rel="noopener noreferrer" class="contact-channel" id="contact-github" role="listitem" aria-label="Ver perfil GitHub">
+              <div class="channel-icon" aria-hidden="true"><i class="fab fa-github"></i></div>
+              <div class="channel-info">
+                <span class="channel-label">GitHub</span>
+                <span class="channel-value">github.com/nhellman</span>
+              </div>
+              <i class="fas fa-arrow-right channel-arrow" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/in/nhellman" target="_blank" rel="noopener noreferrer" class="contact-channel" id="contact-linkedin" role="listitem" aria-label="Ver perfil LinkedIn">
+              <div class="channel-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></div>
+              <div class="channel-info">
+                <span class="channel-label">LinkedIn</span>
+                <span class="channel-value">linkedin.com/in/nhellman</span>
+              </div>
+              <i class="fas fa-arrow-right channel-arrow" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="location-badge" aria-label="Ubicación">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <span>Chile 🇨🇱 — Disponible para trabajo remoto global</span>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate aria-label="Formulario de contacto">
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Nombre</label>
+            <input type="text" id="contact-name" name="name" class="form-input" placeholder="Tu nombre" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="contact-email-input" class="form-label">Email</label>
+            <input type="email" id="contact-email-input" name="email" class="form-input" placeholder="tu@email.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="contact-subject" class="form-label">Asunto</label>
+            <select id="contact-subject" name="subject" class="form-input form-select">
+              <option value="">¿Sobre qué quieres hablar?</option>
+              <option value="webapp">Aplicación web</option>
+              <option value="erp">Sistema ERP</option>
+              <option value="rpa">Automatización / RPA</option>
+              <option value="devops">DevOps / Infraestructura</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Mensaje</label>
+            <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="Cuéntame sobre tu proyecto..." required rows="5" aria-describedby="message-hint"></textarea>
+            <span id="message-hint" class="form-hint">Describe brevemente qué necesitas desarrollar.</span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="contact-submit-btn">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            <span>Enviar mensaje</span>
+          </button>
+          <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite" aria-atomic="true"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>NH<span class="logo-bracket">/&gt;</span>
+          <p>Nicolás Hellman Becerra</p>
+          <p class="footer-sub">Desarrollador Independiente · Chile</p>
+        </div>
+        <div class="footer-links" role="navigation" aria-label="Links del footer">
+          <a href="#inicio" class="footer-link" id="footer-inicio">Inicio</a>
+          <a href="#proyectos" class="footer-link" id="footer-proyectos">Proyectos</a>
+          <a href="#habilidades" class="footer-link" id="footer-habilidades">Habilidades</a>
+          <a href="#contacto" class="footer-link" id="footer-contacto">Contacto</a>
+        </div>
+        <div class="footer-socials" aria-label="Redes sociales">
+          <a href="https://github.com/nhellman" target="_blank" rel="noopener noreferrer" class="social-btn" id="footer-github" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/in/nhellman" target="_blank" rel="noopener noreferrer" class="social-btn" id="footer-linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:nhellman.dev@gmail.com" class="social-btn" id="footer-email" aria-label="Email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Nicolás Hellman Becerra. Todos los derechos reservados.</p>
+        <p class="footer-craft">Diseñado y desarrollado con <span aria-label="amor">❤️</span> en Chile</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
